@@ -1,0 +1,98 @@
+:root {
+	--ink: #30251e;
+	--forest: #4a392c;
+	--moss: #68704b;
+	--gold: #ad762c;
+	--cream: #f5ecd7;
+	--paper: #e9dcc0;
+	--rust: #984735;
+}
+
+* { box-sizing: border-box; }
+
+body {
+	background: #d7c49f;
+	color: var(--ink);
+	font-family: "Libre Baskerville", Georgia, serif;
+	letter-spacing: 0;
+}
+
+body::before {
+	background-image: radial-gradient(rgba(62, 42, 26, .14) .7px, transparent .8px), radial-gradient(rgba(255, 248, 224, .2) .8px, transparent .9px);
+	background-position: 0 0, 7px 9px;
+	background-size: 13px 13px, 17px 17px;
+	content: "";
+	inset: 0;
+	pointer-events: none;
+	position: fixed;
+	z-index: -1;
+}
+
+.navbar { background: var(--ink); box-shadow: 0 3px 0 rgba(74, 50, 32, .28); }
+.navbar-brand { align-items: center; color: var(--cream); display: flex; font-family: "Special Elite", serif; font-size: 1rem; gap: .7rem; }
+.navbar-brand:hover, .nav-link:hover { color: var(--gold); }
+.navbar-brand strong { color: var(--gold); }
+.brand-mark { border: 2px solid var(--gold); color: var(--gold); font-family: "Special Elite", serif; font-size: .8rem; padding: .2rem .3rem; }
+.nav-link { color: rgba(245, 236, 215, .7); font-family: "Special Elite", serif; font-size: .8rem; text-transform: uppercase; }
+.nav-link.active { color: var(--gold) !important; }
+
+.hero-panel { align-items: center; background: linear-gradient(90deg, rgba(48, 37, 30, .97) 0%, rgba(48, 37, 30, .82) 43%, rgba(48, 37, 30, .35) 100%), radial-gradient(circle at 78% 50%, rgba(173, 118, 44, .3), transparent 26%), repeating-linear-gradient(115deg, rgba(245, 236, 215, .05) 0 2px, transparent 2px 13px), var(--forest); border: 7px solid var(--paper); box-shadow: 0 0 0 1px var(--ink), 7px 8px 0 rgba(48, 37, 30, .18); display: flex; justify-content: space-between; min-height: 430px; overflow: hidden; padding: clamp(2rem, 6vw, 5rem); position: relative; }
+.hero-panel::after { border: 1px solid rgba(245, 236, 215, .35); content: ""; inset: 14px; pointer-events: none; position: absolute; }
+.astera-emblem { align-items: center; border: 3px solid rgba(245, 236, 215, .72); border-radius: 50%; box-shadow: 0 0 0 9px rgba(245, 236, 215, .08), 0 0 0 12px rgba(245, 236, 215, .45), inset 0 0 0 5px rgba(245, 236, 215, .14); color: rgba(245, 236, 215, .8); display: flex; flex-direction: column; height: clamp(15rem, 34vw, 25rem); justify-content: center; position: absolute; right: 8%; text-align: center; top: 50%; transform: translateY(-50%) rotate(-8deg); width: clamp(15rem, 34vw, 25rem); z-index: 1; }
+.astera-emblem::before, .astera-emblem::after { border: 1px solid rgba(245, 236, 215, .55); content: ""; height: 75%; position: absolute; width: 1px; }
+.astera-emblem::before { transform: rotate(45deg); }
+.astera-emblem::after { transform: rotate(-45deg); }
+.astera-emblem strong { font-family: "Special Elite", serif; font-size: clamp(9rem, 22vw, 18rem); font-weight: 400; line-height: .78; position: relative; z-index: 1; }
+.astera-emblem small { border-top: 1px solid rgba(245, 236, 215, .65); font-family: "Special Elite", serif; font-size: .62rem; letter-spacing: .15em; margin-top: .8rem; padding-top: .5rem; position: relative; z-index: 1; }
+.emblem-rays { color: var(--gold); font-size: 1.4rem; line-height: 1; position: absolute; top: 13%; z-index: 1; }
+.hero-copy { max-width: 570px; position: relative; z-index: 1; }
+.eyebrow, .tag { color: var(--gold); font-family: "Special Elite", serif; font-size: .72rem; letter-spacing: .12em; }
+h1, h2 { font-family: "Special Elite", serif; font-weight: 400; letter-spacing: .01em; line-height: .95; text-transform: uppercase; }
+h1 { color: var(--cream); font-size: clamp(3.6rem, 8vw, 6.8rem); margin: 1rem 0; }
+h1 span, .arsenal-panel em { color: var(--gold); font-style: normal; }
+.hero-text { color: rgba(245, 236, 215, .82); font-size: 1rem; max-width: 390px; }
+.btn-hunt { background: var(--gold); border-radius: 2px; color: var(--ink); font-family: "Special Elite", serif; font-size: .8rem; margin-top: 1.4rem; padding: .8rem 1.2rem; }
+.btn-hunt:hover { background: var(--cream); color: var(--ink); }
+.btn-hunt span { font-size: 1.3rem; margin-left: 1rem; }
+.hero-stamp { border: 2px solid var(--gold); color: var(--gold); display: flex; flex-direction: column; font-family: "Special Elite", serif; line-height: .8; margin-right: 4%; padding: 1.1rem; position: relative; text-align: center; transform: rotate(-8deg); z-index: 1; }
+.hero-stamp span { font-size: 1.2rem; }
+.hero-stamp strong { font-size: 2.4rem; }
+.hero-stamp small { border-top: 1px solid var(--gold); font-size: .6rem; letter-spacing: .15em; margin-top: .6rem; padding-top: .5rem; }
+
+.feature-card { background-position: center; background-size: cover; box-shadow: 5px 6px 0 rgba(48, 37, 30, .18); min-height: 320px; position: relative; }
+.feature-card::before { background: linear-gradient(90deg, rgba(48, 37, 30, .96), rgba(48, 37, 30, .25)); content: ""; inset: 0; position: absolute; }
+.feature-card--quest { background-image: url("https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1000&q=80"); }
+.feature-card--camp { background-image: url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1000&q=80"); }
+.card-content { max-width: 330px; padding: 2rem; position: relative; }
+.feature-card h2 { font-size: 2.8rem; margin: 1rem 0; }
+.feature-card p, .info-panel p { color: rgba(241, 231, 204, .72); font-size: 1.08rem; }
+.text-link { color: var(--gold); display: inline-block; font-family: "Special Elite", serif; font-size: .75rem; margin-top: 1rem; text-decoration: none; }
+.text-link:hover { color: var(--cream); }
+.text-link span { font-size: 1.1rem; margin-left: .5rem; }
+
+.info-panel { background: var(--paper); box-shadow: 4px 5px 0 rgba(48, 37, 30, .16); color: var(--ink); padding: 1.7rem; position: relative; }
+.info-panel--dark { background: var(--forest); color: var(--cream); }
+.info-panel--gold { background: var(--gold); }
+.panel-number { color: var(--rust); font-family: "Special Elite", serif; position: absolute; right: 1.5rem; top: 1.5rem; }
+.icon-badge { color: var(--rust); font-size: 2rem; line-height: 1; margin-bottom: 1.5rem; }
+.info-panel h2 { font-size: 1.8rem; }
+.info-panel .text-link { color: var(--rust); }
+.info-panel--dark .text-link { color: var(--gold); }
+
+.quote-panel { background: var(--rust); box-shadow: 4px 5px 0 rgba(48, 37, 30, .18); padding: 2rem; }
+.quote-panel blockquote { font-family: "Special Elite", serif; font-size: 2rem; font-weight: 400; line-height: 1; margin: 3rem 0 1rem; }
+.quote-panel cite { color: rgba(241, 231, 204, .7); font-size: .95rem; font-style: normal; }
+.arsenal-panel { align-items: center; background: var(--forest); border: 7px solid var(--paper); box-shadow: 0 0 0 1px var(--ink), 5px 6px 0 rgba(48, 37, 30, .16); display: flex; gap: 2rem; justify-content: space-between; padding: 2rem; }
+.arsenal-panel h2 { font-size: clamp(2rem, 4vw, 3.4rem); margin: 1rem 0 0; }
+.loadout-list { border-left: 1px solid rgba(220, 174, 69, .45); color: var(--cream); min-width: 240px; padding-left: 1.5rem; }
+.loadout-list div { border-bottom: 1px solid rgba(241, 231, 204, .15); font-size: 1rem; padding: .7rem 0; }
+.loadout-list span { color: var(--gold); margin-right: .5rem; }
+.loadout-list strong { color: var(--gold); float: right; }
+.site-footer { border-top: 2px solid rgba(48, 37, 30, .35); color: rgba(48, 37, 30, .65); font-family: "Special Elite", serif; font-size: .7rem; letter-spacing: .08em; padding: 1.4rem 0; }
+
+@media (max-width: 767.98px) {
+	.hero-panel { min-height: 520px; }
+	.hero-stamp { bottom: 2rem; position: absolute; right: 1rem; }
+	.arsenal-panel { align-items: stretch; flex-direction: column; }
+	.loadout-list { border-left: 0; border-top: 1px solid rgba(220, 174, 69, .45); padding-left: 0; padding-top: 1rem; }
+}
